@@ -1,0 +1,5 @@
+peewee
+pwntools
+requests
+APScheduler==3.10.1
+loguru

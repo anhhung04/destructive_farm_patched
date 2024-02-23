@@ -1,0 +1,4 @@
+farm_client
+core/__pycache__
+exploits/*.py
+fallback.db

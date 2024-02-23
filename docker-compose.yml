@@ -1,0 +1,17 @@
+version: '1.0'
+
+services:
+  server:
+    build: ./server
+    volumes:
+      - ./server:/server
+    environment:
+      - FORMAT_URL=host.docker.internal:80%s
+      - SCOREBOARD_URL=e77s2ft2.requestrepo.com
+      - SYSTEM_TOKEN=token
+      - SUBMIT_FLAG_LIMIT=10
+      - SUBMIT_PERIOD=20
+      - FLAG_LIFETIME=150
+      - TICK_PERIOD=30
+    ports:
+      - 5000:5000

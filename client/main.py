@@ -62,7 +62,8 @@ def run_exploits():
 
 
 def run_exploit(exploit):
-    runner_command = ['python', RUNNER_PATH] + ['--name',exploit_name]
+    runner_command = ['python', RUNNER_PATH] + \
+        ['--name', exploit_name] + ['--server-url', server_url]
     runner_command.extend(['--module', exploit])
     runner_command.extend(['--timeout', str(timeout)])
 

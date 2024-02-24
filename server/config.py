@@ -4,8 +4,8 @@ CONFIG = {
 
     # The clients will run sploits on TEAMS and
     # fetch FLAG_FORMAT from sploits' stdout.
-    'TEAMS': {'Team #{}'.format(i): os.getenv("FORMAT_URL", "10.10.0.%s") % i for i in range(1, 29 + 1)},
-    'FLAG_FORMAT': os.getenv("FLAG_FORMAT", "[a-zA-Z0-9]{31}="),
+    'TEAMS': {'Team #{}'.format(i): f"172.28.13.183:80{i}" for i in range(1, 6)},
+    'FLAG_FORMAT': r"BKISC{[a-zA-Z0-9]+}",
 
     # This configures how and where to submit flags.
     # The protocol must be a module in protocols/ directory.

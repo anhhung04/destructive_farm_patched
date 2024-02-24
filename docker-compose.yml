@@ -6,12 +6,11 @@ services:
     volumes:
       - ./server:/server
     environment:
-      - FORMAT_URL=host.docker.internal:80%s
-      - SCOREBOARD_URL=e77s2ft2.requestrepo.com
-      - SYSTEM_TOKEN=token
-      - SUBMIT_FLAG_LIMIT=10
-      - SUBMIT_PERIOD=20
-      - FLAG_LIFETIME=150
-      - TICK_PERIOD=30
+      - SCOREBOARD_URL=172.28.13.183:8000
+      - SYSTEM_TOKEN=934310005a1447b8bd52d9dcbd5c405a
+      - SUBMIT_FLAG_LIMIT=50
+      - SUBMIT_PERIOD=50
+      - FLAG_LIFETIME=1500
+      - TICK_PERIOD=300
     ports:
       - 5000:5000
